@@ -1,10 +1,13 @@
+{% extends "HelloDjangoApp/layout.html" %}
 <html>
     <head>
         <title>{{ title }}</title>
         {% load staticfiles %} <!-- Instruct Django to load static files -->
-        <link rel="stylesheet" type="text/css" href="{% static 'site.css' %}" />
+       <link rel="stylesheet" type="text/css" href="{% static 'site.css' %}" />
     </head>
     <body>
+        {% block content %}
         <span class="message">{{ message }}</span>{{ content }}
+        {% endblock %}
     </body>
 </html>
